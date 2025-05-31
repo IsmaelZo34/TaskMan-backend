@@ -23,6 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
+        if(app()->environment('production')){
+            try{
+                Artisan::call('migrate', ['--force' => 'true']);
+            }catch (\Exception $e) {
+                logger()->error('Migration failed: '.$e->getMessage());
+            }
+        }
     }
 }
