@@ -20,10 +20,15 @@ Ce backend expose une API RESTful permettant d'ajouter, modifier, supprimer et l
 - Composer
 
 📋 Endpoints Tâches (auth requis)
+
 -GET /api/tasks – Liste des tâches
+
 -POST /api/tasks – Ajouter une tâche
+
 -PUT /api/tasks/{id} – Modifier une tâche
+
 -DELETE /api/tasks/{id} – Supprimer une tâche
+
 🧑‍💼 Auteur 
  IsmaelZo34 
    
